@@ -21,7 +21,7 @@ before_install:
   - docker build -t caliali/react-test -f  ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true caliali/docker-react npm test
+  - docker run -e CI=true aheckman/docker-react npm run test
 
 deploy:
   provider: script
